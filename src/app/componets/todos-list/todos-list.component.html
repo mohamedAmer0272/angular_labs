@@ -1,0 +1,32 @@
+<div class=" container rounded-3 border border-2 border-dark my-5 bg-white" style="height:auto;">
+  <div>
+    <h1 class=" h1">To Do List</h1>
+    <div class="row">
+      <div class=" col-8">
+        <input class=" py-3 form-control shadow" placeholder="input your task" type="text" [(ngModel)]="inpVal">
+      </div>
+      <div class="col-2">
+        <!-- <i onclick="addList()" class=" btn btn-dark rounded-pill fas fa-4x fa-plus-circle "></i> -->
+        <button (click)="addList()" class=" mt-2 btn btn-dark"> Add </button>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row" *ngFor="let item of DoList; let i =index">
+    <div class=" col-8">
+      <p class="input-group-text bg-black text-light">{{item}}</p>
+    </div>
+    <div class="col-2">
+      <button (click)="Remove(i)" class="  btn btn-danger"> Remove </button>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="row rounded bg-white">
+    <ul class=" col-12 list-group" *ngFor="let item of DoList">
+      <li class=" list-group-item list-unstyled form-control" id="list">{{item}}
+        <input type="button" value="Remove" class="btn btn-danger ms-auto">
+      </li>
+    </ul>
+  </div> -->

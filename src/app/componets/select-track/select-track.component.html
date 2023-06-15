@@ -1,0 +1,29 @@
+<h2 class="m-auto text-center">select track </h2>
+<form class="col-6 m-auto mt-5 ">
+  <select class="form-select col-6 " name="selectedItem" [(ngModel)]="selectedItem" id="">
+
+    <option selected disabled value="">select your track </option>
+    <option value="front end">front end</option>
+    <option value=".net">.net</option>
+    <option value="mearn">mearn</option>
+  </select>
+  <ul *ngIf="selectedItem =='front end' " class="list-group mt-4 ">
+    <li class="list-unstyled">this track is open in</li>
+    <li class=" list-group-item ">cairo univrsity</li>
+    <li class=" list-group-item">smart village</li>
+  </ul>
+
+  <ul *ngIf="selectedItem =='.net' " class="list-group mt-4 ">
+    <li class="list-unstyled">this track is open in</li>
+    <li class=" list-group-item ">mansoura</li>
+    <li class=" list-group-item">alex</li>
+  </ul>
+
+  <ul *ngIf="selectedItem =='mearn' " class="list-group mt-4 ">
+    <li class="list-unstyled">this track is open in</li>
+    <li class=" list-group-item ">sohag</li>
+    <li class=" list-group-item">menofia</li>
+  </ul>
+
+
+</form>
